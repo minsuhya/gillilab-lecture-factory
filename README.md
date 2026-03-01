@@ -1,174 +1,128 @@
-# 🎓 Gillilab Lecture Factory
+# Gillilab Lecture Factory
 
-> AI 기반 자동화된 기술 강의 문서 생성 시스템
+> 25년차 풀스택 개발자 · 정보관리기술사의 실무 중심 IT 기술 강의 자료 저장소
 
-실무 중심의 한국어 기술 강의 자료를 자동으로 생성하는 Claude Code 스킬 기반 시스템입니다. 유튜브 롱폼 동영상 강의에 최적화된 10,000-20,000자 분량의 완전한 학습 자료를 15분 내에 생성합니다.
+25년간 현장에서 쌓은 실무 경험과 정보관리기술사 자격을 기반으로, 유튜브 기술 강의에 사용되는 모든 학습 자료를 체계적으로 관리하고 공유하는 저장소입니다.
 
-[![Claude Code](https://img.shields.io/badge/Claude-Code-orange)](https://claude.ai/code)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
-
-## ✨ 주요 기능
-
-- 🤖 **자동 문서 생성**: 주제와 URL만 입력하면 완전한 강의 문서 자동 생성
-- 🔍 **공식 문서 기반**: WebSearch/WebFetch를 활용한 정확한 최신 정보 수집
-- 📚 **표준화된 구조**: 11개 섹션으로 구성된 체계적인 학습 자료
-- 💻 **실행 가능한 코드**: 모든 예제는 복사-붙여넣기로 즉시 실행 가능
-- 🎯 **실무 중심**: 30년 풀스택 개발자 관점의 실전 위주 내용
-- 🇰🇷 **한국어 최적화**: 기술 용어는 영어, 설명은 명확한 한국어
-
-## 📦 설치
-
-이 프로젝트는 [Claude Code](https://claude.ai/code)를 사용합니다.
-
-```bash
-# 저장소 클론
-git clone https://github.com/yourusername/gillilab-lecture-factory.git
-cd gillilab-lecture-factory
-
-# Claude Code에서 프로젝트 열기
-code .
-```
-
-## 🚀 사용 방법
-
-### 기본 사용법
-
-Claude Code에서 다음과 같이 요청하세요:
-
-```
-"FastAPI 완벽 가이드" 강의 문서를 작성해줘.
-```
-
-### URL 제공하기
-
-공식 문서나 참고 자료 URL을 함께 제공하면 더 정확한 문서가 생성됩니다:
-
-```
-https://fastapi.tiangolo.com/
-https://fastapi.tiangolo.com/tutorial/
-"FastAPI" 강의 문서를 작성해줘.
-```
-
-### 생성되는 파일
-
-문서는 루트 디렉토리에 자동으로 저장됩니다:
-
-```
-0001.FastAPI.md
-0002.Docker.md
-0003.React Hooks.md
-```
-
-## 📄 문서 구조
-
-생성되는 모든 강의 문서는 다음 구조를 따릅니다:
-
-1. **개요** - 기술 소개, 주요 특징, 사용 사례
-2. **시작하기** - 설치 및 초기 설정
-3. **핵심 개념** - 기본 개념과 작동 원리
-4. **필수 도구 설치 및 설정** - 단계별 설치 가이드
-5. **생산성 향상 플러그인** - 확장 기능
-6. **현대적 CLI 도구** - 최신 도구 및 성능 비교
-7. **실무 예제** - 3개 이상의 완전한 실전 예제
-8. **베스트 프랙티스** - 최적화, 보안, 테스트
-9. **트러블슈팅** - 자주 발생하는 오류 및 해결법
-10. **추가 학습 자료** - 공식 문서, 튜토리얼, 커뮤니티
-11. **결론** - 요약 및 다음 단계
-
-## 📚 생성된 문서 예시
-
-- [생산성 극대화를 위한 터미널 설정 및 사용법](./0001.생산성%20극대화를%20위한%20터미널%20설정%20및%20사용법.md)
-
-## 🏗️ 프로젝트 구조
-
-```
-gillilab-lecture-factory/
-├── .claude/
-│   └── skills/
-│       └── lecture-doc-generator/
-│           ├── SKILL.md              # 스킬 정의
-│           └── references/
-│               ├── template.md        # 표준 템플릿
-│               └── section-guidelines.md
-├── CLAUDE.md                          # Claude Code 가이드
-├── README.md                          # 프로젝트 소개
-└── 0001.[주제].md                     # 생성된 강의 문서
-```
-
-## 🎯 작성 원칙
-
-### 한국어 스타일
-- 존댓말 사용 ("~합니다", "~입니다")
-- 기술 용어는 영어, 첫 등장 시 한국어 병기
-- 명확하고 직접적인 표현
-
-### 코드 예제
-- 모든 예제는 실행 가능해야 함
-- 필요한 import/의존성 포함
-- 한글 주석으로 핵심 설명
-- 예상 출력 포함
-
-### 실무 중심
-- 이론보다 실전 위주
-- 흔한 실수와 해결법
-- 성능 및 보안 고려사항
-- 프로덕션 환경 팁
-
-## 🔧 커스터마이징
-
-### 템플릿 수정
-
-표준 템플릿을 수정하려면:
-
-```
-.claude/skills/lecture-doc-generator/references/template.md
-```
-
-### 섹션별 가이드라인
-
-각 섹션의 작성 방법은:
-
-```
-.claude/skills/lecture-doc-generator/references/section-guidelines.md
-```
-
-## 💡 사용 사례
-
-### 프로그래밍 강의
-- Python, JavaScript, Go 등 언어 가이드
-- FastAPI, React, Django 등 프레임워크 튜토리얼
-
-### DevOps 교육
-- Docker, Kubernetes 학습 자료
-- CI/CD 파이프라인 가이드
-
-### 개발 도구
-- Git, VS Code, iTerm2 등 도구 매뉴얼
-- 생산성 향상 도구 가이드
-
-## 🤝 기여
-
-기여는 언제나 환영합니다!
-
-1. Fork the Project
-2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the Branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
-
-## 📝 라이선스
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## 🙏 감사의 말
-
-- [Claude Code](https://claude.ai/code) - AI 기반 개발 환경
-- [Anthropic](https://www.anthropic.com/) - Claude AI 제공
-
-## 📧 연락처
-
-프로젝트 관련 문의: [GitHub Issues](https://github.com/yourusername/gillilab-lecture-factory/issues)
 
 ---
 
-**Made with ❤️ using Claude Code**
+## 채널 소개
+
+**Gillilab**은 25년차 풀스택 개발자이자 정보관리기술사가 운영하는 실무·전문 IT 기술 강의 채널입니다.
+
+- **실무 경험 기반**: 스타트업부터 대기업까지, 다양한 현장에서 검증된 기술과 노하우
+- **정보관리기술사 시각**: 시스템 설계, 아키텍처, 프로젝트 관리를 전문가 관점에서 해설
+- **이론 + 실전**: 자격증 시험에 나오는 이론을 실제 코드와 프로덕션 환경에 연결
+- **한국어 최적화**: 기술 용어는 영어 원어를 유지하면서, 개념은 명확한 한국어로 설명
+
+### 강의 카테고리
+
+| 카테고리 | 주제 예시 |
+|---|---|
+| **개발 도구 & 생산성** | 터미널 설정, Git 고급, IDE 최적화 |
+| **백엔드 개발** | FastAPI, Node.js, Go, 데이터베이스 설계 |
+| **DevOps & 인프라** | Docker, Kubernetes, CI/CD, 클라우드 |
+| **아키텍처 & 설계** | MSA, DDD, API 설계, 시스템 설계 |
+| **정보처리기사 / 기술사** | 소프트웨어공학, 데이터베이스, 네트워크, 보안 |
+
+---
+
+## 저장소 구조
+
+각 강의는 독립된 폴더로 관리되며, 강의자용 스크립트와 시청자용 가이드를 분리하여 제공합니다.
+
+```
+gillilab-lecture-factory/
+│
+├── lectures/                              # 모든 강의 자료
+│   └── 0001-터미널-생산성-설정/
+│       ├── lecture-script.md              # 강의자용 낭독 스크립트 (큐 마커, 타이밍 포함)
+│       ├── README.md                      # 시청자용 실용 가이드 (GitHub에서 자동 표시)
+│       ├── youtube-metadata.md            # YouTube 제목·설명·태그
+│       ├── assets/                        # 이미지, 다이어그램
+│       └── examples/                      # 실행 가능한 코드 샘플
+│
+├── shared/                                # 강의 간 공통 자료
+│   ├── assets/                            # 공통 이미지/로고
+│   └── snippets/                          # 공통 코드 스니펫
+│
+└── README.md
+```
+
+### 파일 역할
+
+| 파일 | 대상 | 내용 |
+|---|---|---|
+| `lecture-script.md` | 강의자 | 실제 강의 시 읽는 스크립트. 섹션별 큐 마커와 예상 소요 시간 포함 |
+| `README.md` | 시청자 | GitHub에서 바로 열람 가능한 실용 가이드. 코드 예제와 참고 링크 중심 |
+| `youtube-metadata.md` | 운영자 | 제목 후보, 설명문, 태그, 썸네일 문구 등 업로드 메타데이터 |
+
+### 강의 번호 규칙
+
+```
+lectures/[4자리번호]-[슬러그]/
+  예) lectures/0001-터미널-생산성-설정/
+      lectures/0002-docker-compose/
+      lectures/0023-fastapi-완벽-가이드/
+```
+
+---
+
+## 강의 문서 구조
+
+모든 강의의 시청자용 `README.md`는 **표준 9섹션 구조**를 따릅니다:
+
+1. **개요** — 기술 소개, 핵심 특징, 적합한 사용 사례
+2. **시작하기** — 사전 요구사항, 설치, 초기 환경 구성
+3. **핵심 개념** — 동작 원리, 아키텍처, 핵심 용어
+4. **필수 도구 설치 및 설정** — 단계별 설치 가이드
+5. **생산성 향상 플러그인** — 확장 기능, 추천 설정
+6. **현대적 CLI 도구** — 최신 도구 비교, 벤치마크
+7. **실무 예제** — 3개 이상의 완전한 실전 예제
+8. **베스트 프랙티스** — 최적화, 보안, 테스트, 배포
+9. **트러블슈팅** — 자주 발생하는 오류와 해결법
+
+---
+
+## 콘텐츠 원칙
+
+### 25년차 개발자 관점
+- 이론보다 **현장에서 실제로 쓰는 방법** 우선
+- 흔히 빠지는 함정과 그 해결책 직접 제시
+- 스타트업부터 엔터프라이즈까지 규모별 접근법 차별화
+
+### 정보관리기술사 관점
+- 기술 선택의 **배경과 설계 원칙** 설명
+- 시스템 전체 그림 속에서 개별 기술의 위치 파악
+- 자격증 시험 관련 개념을 실무 코드와 연결
+
+### 코드 예제 기준
+- 모든 예제는 **복사-붙여넣기로 즉시 실행 가능**
+- 필요한 import/의존성 완전 포함
+- 한글 주석으로 핵심 동작 설명
+- 예상 출력 결과 명시
+
+### 한국어 스타일
+- 존댓말 사용 ("~합니다", "~입니다")
+- 기술 용어는 영어 원어 유지, 첫 등장 시 한국어 병기: "컨테이너(Container)"
+- 명확하고 직접적인 표현, 불필요한 영어 남용 지양
+
+---
+
+## 강의 목록
+
+| 번호 | 주제 | 강의 스크립트 | 시청자 가이드 |
+|---|---|---|---|
+| 0001 | 생산성 극대화를 위한 터미널 설정 및 사용법 | [script](./lectures/0001-터미널-생산성-설정/lecture-script.md) | [README](./lectures/0001-터미널-생산성-설정/README.md) |
+
+---
+
+## 라이선스
+
+MIT License — 강의 자료는 자유롭게 활용하되, 출처를 밝혀주세요.
+
+---
+
+**Gillilab — 현장의 경험을 코드로 전달합니다**
