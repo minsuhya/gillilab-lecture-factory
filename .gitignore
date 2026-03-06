@@ -11,6 +11,7 @@
 
 # OMC state & session files
 .omc/
+.openchrome/
 
 # Assets (local only)
 assets/
